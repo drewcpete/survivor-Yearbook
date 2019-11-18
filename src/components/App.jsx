@@ -5,6 +5,7 @@ import ClassList from "./ClassList";
 import Home from "./Home";
 import NavBar from "./NavBar";
 import Error404 from "./Error404";
+import NewStudentForm from './NewStudentForm';
 
 function App(){
   var siteStyle = {
@@ -17,8 +18,9 @@ function App(){
       <NavBar/>
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route  path="/Student" component={StudentList} />
+        <Route path="/Student" component={StudentList} />
         <Route path ='/Class' component={ClassList} />
+        <Route path = '/newstudent' component={NewStudentForm}/>
         <Route component={Error404} />
       </Switch>
     </div>

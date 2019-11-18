@@ -44,8 +44,9 @@ function NavBar() {
         <div className="navbar-collapse collapse d-lg-inline-flex flex-lg-row">
             <ul className="navbar-nav flex-grow-1 mr-auto">
                 <li className="nav-item">
-                <button style={navBar} className="btn btn-light nav-link text-light" ><Link style={navLink} to="/Student">Classes</Link></button>
-                    
+                <button style={navBar} className="btn btn-light nav-link text-light" ><Link style={navLink} to="/Student">Classes</Link></button> 
+                <button style={navBar} className="btn btn-light nav-link text-light" ><Link style={navLink} to="/newstudent">Add New Student</Link></button>
+                
                 </li>
 
 
