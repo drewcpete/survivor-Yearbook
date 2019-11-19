@@ -1,5 +1,6 @@
 import React from "react";
 import Student from "./Student";
+import PropTypes from 'prop-types';
 import Christian from "../Assets/Img/Christian.jpg";
 import Gabby from "../Assets/Img/Gabby.jpg";
 import Mike from "../Assets/Img/Mike.jpg";
@@ -57,20 +58,25 @@ var MasterStudentList = [
   }
 ];
 
-function StudentList() {
+function StudentList(props) {
 
   return (
     <div>
       <hr />
-      {MasterStudentList.map((student, index) =>
+      {props.studentList.map((student) =>
         <Student name={student.name}
           photo={student.photo}
           age={student.age}
           startTribe={student.startTribe}
-          place={student.place} 
-          key={index}/> 
+          place={student.place}
+          key={student.id} />
       )}
     </div>
   );
 }
+
+StudentList.propTypes = {
+  studentList: PropTypes.array
+};
+
 export default StudentList;
